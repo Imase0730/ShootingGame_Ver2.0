@@ -20,14 +20,26 @@ GamePlayScene::GamePlayScene(Game* pGame)
 	, m_pPlayerBulletManager{ nullptr }
 	, m_pEnemyBulletManager{ nullptr }
 {
+	// プレイヤーの弾のマネージャーの作成
+	m_pPlayerBulletManager = new BulletManager(&m_taskManager, PLAYER_BULLET_MAX);
 
+	// 敵の弾のマネージャーの作成
+	m_pEnemyBulletManager = new BulletManager(&m_taskManager, ENEMY_BULLET_MAX);
+
+	// プレイヤータスクの登録
+	m_pPlayer = m_taskManager.AddTask<Player>();
+
+	// 敵のマネージャーのタスク登録
+	m_pEnemyManager = m_taskManager.AddTask<EnemyManager>(&m_taskManager, ENEMY_MAX, m_pEnemyBulletManager);
 }
 
 // デストラクタ
 GamePlayScene::~GamePlayScene()
 {
-	// 弾のマネージャーの解放
+	// プレイヤーの弾のマネージャーの解放
 	if (m_pPlayerBulletManager) delete m_pPlayerBulletManager;
+
+	// 敵の弾のマネージャーの解放
 	if (m_pEnemyBulletManager) delete m_pEnemyBulletManager;
 }
 
@@ -40,20 +52,15 @@ void GamePlayScene::Initialize()
 	// 絵の読み込み
 	m_ghTexture = LoadGraph(L"Resources/Textures/ShootingGame.png");
 
-	// プレイヤータスクの登録
-	m_pPlayer = m_taskManager.AddTask<Player>(m_ghTexture);
-
 	// プレイヤーの位置を中央に設定
-	m_pPlayer->SetPosition(Vector2D{ PLAYER_START_POSITION_X, PLAYER_START_POSITION_Y });
+	m_pPlayer->Initialize(Vector2D{ PLAYER_START_POSITION_X, PLAYER_START_POSITION_Y }, m_ghTexture);
 
-	// プレイヤーの弾のマネージャーの作成
-	m_pPlayerBulletManager = new BulletManager(&m_taskManager, PLAYER_BULLET_MAX, m_ghTexture);
+	// 敵のマネージャーの初期化
+	m_pEnemyManager->Initialize(m_ghTexture);
 
-	// 敵の弾のマネージャーの作成
-	m_pEnemyBulletManager = new BulletManager(&m_taskManager, ENEMY_BULLET_MAX, m_ghTexture);
-
-	// 敵のマネージャーのタスク登録
-	m_pEnemyManager = m_taskManager.AddTask<EnemyManager>(&m_taskManager, ENEMY_MAX, m_ghTexture, m_pEnemyBulletManager);
+	// 各弾のマネージャーの初期化
+	m_pPlayerBulletManager->Initialize(m_ghTexture);
+	m_pEnemyBulletManager->Initialize(m_ghTexture);
 }
 
 // 更新処理

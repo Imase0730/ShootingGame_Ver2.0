@@ -6,8 +6,8 @@
 #include "Bullet.h"
 
 // コンストラクタ
-BulletManager::BulletManager(Imase::TaskManager* pTaskManager, int bulletMax, int ghTexture)
-	: m_ghTexture{ ghTexture }
+BulletManager::BulletManager(Imase::TaskManager* pTaskManager, int bulletMax)
+	: m_ghTexture{ -1 }
 {
 	// 配列を最大数確保する
 	m_bullets.resize(bulletMax);
@@ -16,6 +16,29 @@ BulletManager::BulletManager(Imase::TaskManager* pTaskManager, int bulletMax, in
 	for (int i = 0; i < bulletMax; i++)
 	{
 		m_bullets[i] = pTaskManager->AddTask<Bullet>();
+	}
+}
+
+// デストラクタ
+BulletManager::~BulletManager()
+{
+	// 弾のタスクを消去する
+	for (int i = 0; i < m_bullets.size(); i++)
+	{
+		m_bullets[i]->Kill();
+	}
+}
+
+// 初期化関数
+void BulletManager::Initialize(int ghTexture)
+{
+	// 絵のグラフィックハンドルを設定
+	m_ghTexture = ghTexture;
+
+	// 全ての弾を非アクティブ化する
+	for (int i = 0; i < m_bullets.size(); i++)
+	{
+		m_bullets[i]->SetActive(false);
 	}
 }
 

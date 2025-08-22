@@ -43,7 +43,7 @@ public:
 	bool Update(float elapsedTime) override;
 
 	// •`‰æŠÖ”
-	void Render();
+	void Render() override;
 
 	// ’e‚ğ”­Ë‚·‚éŠÖ”
 	void Shoot(Vector2D position, Vector2D velocity, int ghTexture, Type type);

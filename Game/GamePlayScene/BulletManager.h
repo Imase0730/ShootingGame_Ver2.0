@@ -25,7 +25,13 @@ private:
 public:
 
 	// コンストラクタ
-	BulletManager(Imase::TaskManager* pTaskManager, int bulletMax, int ghTexture);
+	BulletManager(Imase::TaskManager* pTaskManager, int bulletMax);
+
+	// デストラクタ
+	~BulletManager();
+
+	// 初期化関数
+	void Initialize(int ghTexture);
 
 	// 弾を発射する関数
 	void ShootBullet(Vector2D position, Vector2D velocity, Bullet::Type type);

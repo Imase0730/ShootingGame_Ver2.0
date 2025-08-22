@@ -7,9 +7,9 @@
 #include "Enemy.h"
 
 // コンストラクタ
-EnemyManager::EnemyManager(Imase::TaskManager* pTaskManager, int enemyMax, int ghTexture, BulletManager* pBulletManager)
+EnemyManager::EnemyManager(Imase::TaskManager* pTaskManager, int enemyMax, BulletManager* pBulletManager)
 	: m_spawnCounter{ 0 }
-	, m_ghTexture{ ghTexture }
+	, m_ghTexture{ -1 }
 {
 	// 配列を最大数確保する
 	m_enemies.resize(enemyMax);
@@ -18,6 +18,24 @@ EnemyManager::EnemyManager(Imase::TaskManager* pTaskManager, int enemyMax, int g
 	for (int i = 0; i < enemyMax; i++)
 	{
 		m_enemies[i] = pTaskManager->AddTask<Enemy>(pBulletManager);
+	}
+}
+
+// 初期化関数
+void EnemyManager::Initialize()
+{
+}
+
+// 初期化関数
+void EnemyManager::Initialize(int ghTexture)
+{
+	// 絵のグラフィックハンドルを設定
+	m_ghTexture = ghTexture;
+
+	// 全ての敵を非アクティブ化する
+	for (int i = 0; i < m_enemies.size(); i++)
+	{
+		m_enemies[i]->SetActive(false);
 	}
 }
 

@@ -6,10 +6,28 @@
 #include "Game/Screen.h"
 
 // コンストラクタ
-Player::Player(int ghTexture)
+Player::Player()
 	: GameObject{ Player::RADIUS }
-	, m_ghTexture{ ghTexture }
+	, m_ghTexture{ -1 }
 {
+}
+
+// 初期化関数
+void Player::Initialize()
+{
+}
+
+// 初期化関数
+void Player::Initialize(Vector2D position, int ghTexture)
+{
+	// アクティブ化する
+	SetActive(true);
+
+	// 初期位置を設定
+	SetPosition(position);
+
+	// 絵のグラフィックハンドルを設定
+	m_ghTexture = ghTexture;
 }
 
 // 更新処理

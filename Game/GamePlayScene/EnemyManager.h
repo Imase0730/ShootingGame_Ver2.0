@@ -37,7 +37,13 @@ private:
 public:
 
 	// コンストラクタ
-	EnemyManager(Imase::TaskManager* pTaskManager, int enemyMax, int ghTexture, BulletManager* pBulletManager);
+	EnemyManager(Imase::TaskManager* pTaskManager, int enemyMax, BulletManager* pBulletManager);
+
+	// 初期化関数
+	void Initialize() override;
+
+	// 初期化関数
+	void Initialize(int ghTexture);
 
 	// 更新処理
 	bool Update(float elapsedTime) override;

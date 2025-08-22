@@ -31,7 +31,13 @@ private:
 public:
 
 	// コンストラクタ
-	Player(int ghTexture);
+	Player();
+
+	// 初期化関数
+	void Initialize() override;
+
+	// 初期化関数
+	void Initialize(Vector2D position, int ghTexture);
 
 	// 更新関数
 	bool Update(float elapsedTime) override;
