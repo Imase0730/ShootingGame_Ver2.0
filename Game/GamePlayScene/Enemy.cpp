@@ -23,8 +23,7 @@ bool Enemy::Update(float elapsedTime)
 	if (!IsActive()) return true;
 
 	// 位置に速度を足す
-	m_position.x += m_velocity.x;
-	m_position.y += m_velocity.y;
+	m_position += m_velocity;
 
 	// 画面外出たら
 	if (m_position.y > Screen::HEIGHT + Enemy::RADIUS)

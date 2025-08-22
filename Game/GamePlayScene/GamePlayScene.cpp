@@ -36,10 +36,10 @@ GamePlayScene::GamePlayScene(Game* pGame)
 // デストラクタ
 GamePlayScene::~GamePlayScene()
 {
-	// プレイヤーの弾のマネージャーの解放
+	// プレイヤーの弾のマネージャーの削除
 	if (m_pPlayerBulletManager) delete m_pPlayerBulletManager;
 
-	// 敵の弾のマネージャーの解放
+	// 敵の弾のマネージャーの削除
 	if (m_pEnemyBulletManager) delete m_pEnemyBulletManager;
 }
 

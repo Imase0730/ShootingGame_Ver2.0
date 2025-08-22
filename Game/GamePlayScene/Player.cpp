@@ -29,8 +29,7 @@ void Player::Initialize(Vector2D position, int ghTexture)
 bool Player::Update(float elapsedTime)
 {
 	// 位置に速度を足す
-	m_position.x += m_velocity.x;
-	m_position.y += m_velocity.y;
+	m_position += m_velocity;
 
 	// プレイヤーが画面外へ出ないように位置を調整
 	if (m_position.x < Player::RADIUS)

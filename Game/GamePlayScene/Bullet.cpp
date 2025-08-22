@@ -21,8 +21,7 @@ bool Bullet::Update(float elapsedTime)
 	if (!IsActive()) return true;
 
 	// 位置に速度を足す
-	m_position.x += m_velocity.x;
-	m_position.y += m_velocity.y;
+	m_position += m_velocity;
 
 	// 画面外に弾が出たか？
 	if ( (m_position.y < -Bullet::SIZE)		// 画面外に出たら（上部）
