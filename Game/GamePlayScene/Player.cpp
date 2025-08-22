@@ -13,11 +13,6 @@ Player::Player()
 }
 
 // 初期化関数
-void Player::Initialize()
-{
-}
-
-// 初期化関数
 void Player::Initialize(Vector2D position, int ghTexture)
 {
 	// アクティブ化する

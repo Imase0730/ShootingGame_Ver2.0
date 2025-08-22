@@ -88,9 +88,6 @@ namespace Imase
 		//										//
 		//////////////////////////////////////////
 
-		// 初期化関数（AddTask後に呼び出される）
-		virtual void Initialize() {};
-
 		// 更新関数（falseを返すとタスクが消える）
 		virtual bool Update(float elapsedTime)
 		{
@@ -234,9 +231,6 @@ namespace Imase
 
 		// 親の子供リストに追加
 		m_currentTask->GetTaskConnectInfo().AddChild(task);
-
-		// タスク生成後の初期化
-		task->Initialize();
 
 		// タスクに名前が付いていない場合は仮で名前を付ける
 		if (task->GetName().empty())

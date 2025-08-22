@@ -22,11 +22,6 @@ EnemyManager::EnemyManager(Imase::TaskManager* pTaskManager, int enemyMax, Bulle
 }
 
 // 初期化関数
-void EnemyManager::Initialize()
-{
-}
-
-// 初期化関数
 void EnemyManager::Initialize(int ghTexture)
 {
 	// 絵のグラフィックハンドルを設定

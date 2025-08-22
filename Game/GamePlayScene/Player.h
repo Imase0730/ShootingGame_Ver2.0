@@ -34,9 +34,6 @@ public:
 	Player();
 
 	// ‰Šú‰»ŠÖ”
-	void Initialize() override;
-
-	// ‰Šú‰»ŠÖ”
 	void Initialize(Vector2D position, int ghTexture);
 
 	// XVŠÖ”

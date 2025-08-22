@@ -40,9 +40,6 @@ public:
 	EnemyManager(Imase::TaskManager* pTaskManager, int enemyMax, BulletManager* pBulletManager);
 
 	// ‰Šú‰»ŠÖ”
-	void Initialize() override;
-
-	// ‰Šú‰»ŠÖ”
 	void Initialize(int ghTexture);
 
 	// XVˆ—
