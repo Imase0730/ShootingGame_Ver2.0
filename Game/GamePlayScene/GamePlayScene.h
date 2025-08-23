@@ -44,7 +44,7 @@ public:
 	static constexpr int PLAYER_BULLET_MAX = 3;
 
 	// 敵の弾の最大数
-	static constexpr int ENEMY_BULLET_MAX = 3;
+	static constexpr int ENEMY_BULLET_MAX = 100;
 
 	// データメンバの宣言 -----------------------------------------------
 private:
