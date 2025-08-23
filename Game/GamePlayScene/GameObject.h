@@ -4,8 +4,8 @@
 //--------------------------------------------------------------------------------------
 #pragma once
 
-#include "TaskManager.h"
-#include "Collision.h"
+#include "Game/Common/TaskManager.h"
+#include "Game/Common/Collision.h"
 
 // ゲームオブジェクトクラス
 class GameObject : public Imase::Task

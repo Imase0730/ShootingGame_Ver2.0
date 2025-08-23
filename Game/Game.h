@@ -16,7 +16,7 @@
 
 // ヘッダファイルの読み込み ===================================================
 
-#include "SceneManager.h"
+#include "Common/SceneManager.h"
 #include "TitleScene/TitleScene.h"
 #include "GamePlayScene/GamePlayScene.h"
 

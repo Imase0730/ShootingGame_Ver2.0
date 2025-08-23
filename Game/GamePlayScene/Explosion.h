@@ -4,8 +4,8 @@
 //--------------------------------------------------------------------------------------
 #pragma once
 
-#include "Game/GameMath.h"
-#include "Game/TaskManager.h"
+#include "Game/Common/GameMath.h"
+#include "Game/Common/TaskManager.h"
 
 // ”š”­ƒNƒ‰ƒX
 class Explosion : public Imase::Task

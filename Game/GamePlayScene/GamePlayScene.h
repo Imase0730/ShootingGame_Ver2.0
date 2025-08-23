@@ -4,9 +4,9 @@
 //--------------------------------------------------------------------------------------
 #pragma once
 
-#include "Game/Scene.h"
 #include "Game/Screen.h"
-#include "Game/TaskManager.h"
+#include "Game/Common/Scene.h"
+#include "Game/Common/TaskManager.h"
 #include "Player.h"
 #include "BulletManager.h"
 #include "EnemyManager.h"

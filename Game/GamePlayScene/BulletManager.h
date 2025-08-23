@@ -5,8 +5,8 @@
 #pragma once
 
 #include <vector>
-#include "Game/TaskManager.h"
-#include "Game/GameMath.h"
+#include "Game/Common/TaskManager.h"
+#include "Game/Common/GameMath.h"
 #include "Bullet.h"
 
 // 弾のマネージャークラス

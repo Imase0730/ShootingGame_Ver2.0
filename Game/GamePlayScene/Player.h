@@ -4,7 +4,7 @@
 //--------------------------------------------------------------------------------------
 #pragma once
 
-#include "Game/GameObject.h"
+#include "GameObject.h"
 
 // プレイヤークラス
 class Player : public GameObject

@@ -4,7 +4,7 @@
 //--------------------------------------------------------------------------------------
 #pragma once
 
-#include "Game/GameObject.h"
+#include "GameObject.h"
 
 // ’eƒNƒ‰ƒX
 class Bullet : public GameObject

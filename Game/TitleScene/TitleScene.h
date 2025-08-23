@@ -4,7 +4,7 @@
 //--------------------------------------------------------------------------------------
 #pragma once
 
-#include "Game/Scene.h"
+#include "Game/Common/Scene.h"
 #include "Game/Screen.h"
 
 // ƒNƒ‰ƒX‚Ì‘O•ûéŒ¾

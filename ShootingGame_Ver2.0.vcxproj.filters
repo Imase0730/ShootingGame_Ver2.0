@@ -33,6 +33,9 @@
     <Filter Include="Game\Title">
       <UniqueIdentifier>{91fcf896-70b0-49d6-9e71-11dcab62b45d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Common">
+      <UniqueIdentifier>{08c8e93f-f099-4792-83cb-f416c1a841ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <!-- ファイル -->
   <ItemGroup>
@@ -42,15 +45,6 @@
     <!-- メイン -->
     <ClCompile Include="WinMain.cpp" />
     <!-- ゲーム -->
-    <ClCompile Include="Game\Game.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClInclude Include="Game\Game.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Screen.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <!-- ライブラリ -->
     <ClInclude Include="Library\DebugHelper.h">
       <Filter>Library</Filter>
@@ -84,23 +78,11 @@
     <Image Include="Resources\Textures\TridentLogo.png">
       <Filter>Resources\Textures</Filter>
     </Image>
-    <ClCompile Include="Game\Scene.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\SceneManager.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\TaskManager.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="Game\GamePlayScene\GamePlayScene.cpp">
       <Filter>Game\GamePlayScene</Filter>
     </ClCompile>
     <ClCompile Include="Game\GamePlayScene\Player.cpp">
       <Filter>Game\GamePlayScene</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\GameObject.cpp">
-      <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Game\GamePlayScene\Bullet.cpp">
       <Filter>Game\GamePlayScene</Filter>
@@ -120,34 +102,31 @@
     <ClCompile Include="Game\TitleScene\TitleScene.cpp">
       <Filter>Game\Title</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Common\Scene.cpp">
+      <Filter>Game\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Common\SceneManager.cpp">
+      <Filter>Game\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Common\TaskManager.cpp">
+      <Filter>Game\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GamePlayScene\GameObject.cpp">
+      <Filter>Game\GamePlayScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game\Scene.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\SceneManager.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\TaskManager.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="Game\GamePlayScene\GamePlayScene.h">
       <Filter>Game\GamePlayScene</Filter>
     </ClInclude>
     <ClInclude Include="Game\GamePlayScene\Player.h">
       <Filter>Game\GamePlayScene</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\GameMath.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Collision.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\GameObject.h">
-      <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Game\GamePlayScene\Bullet.h">
       <Filter>Game\GamePlayScene</Filter>
@@ -166,6 +145,30 @@
     </ClInclude>
     <ClInclude Include="Game\TitleScene\TitleScene.h">
       <Filter>Game\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Common\Collision.h">
+      <Filter>Game\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Common\GameMath.h">
+      <Filter>Game\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Common\Scene.h">
+      <Filter>Game\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Common\SceneManager.h">
+      <Filter>Game\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Common\TaskManager.h">
+      <Filter>Game\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Screen.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GamePlayScene\GameObject.h">
+      <Filter>Game\GamePlayScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
